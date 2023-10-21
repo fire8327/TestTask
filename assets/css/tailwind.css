@@ -4,7 +4,7 @@
 
 @layer base {
     #__nuxt{
-        @apply flex flex-col min-h-screen font-semibold bg-[#181a20] text-white
+        @apply flex flex-col min-h-screen font-semibold
     }
         
     :root{
