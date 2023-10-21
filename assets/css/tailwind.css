@@ -9,7 +9,7 @@
         
     :root{
         /* максимальная ширина контента */
-        @apply [--widthContent:1200px]
+        @apply [--widthContent:1360px]
         /* Растояние от границы брузера по бокам */
         [--widthContentMargin:15px] sm:[--widthContentMargin:20px]
     }    
