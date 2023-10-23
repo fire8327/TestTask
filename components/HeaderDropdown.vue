@@ -14,7 +14,6 @@
     import { vOnClickOutside } from '@vueuse/components'
 
     const isDown = ref(false)
-    const header = useHeader()
     function closeDropdown() {
         isDown.value = false
     }

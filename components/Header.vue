@@ -130,5 +130,9 @@
     })    
 
     const isMenuShow = ref()
+    const nuxtApp = useNuxtApp()
+    nuxtApp.hook('page:start', () => {
+        isMenuShow.value = false
+    })
     
 </script>

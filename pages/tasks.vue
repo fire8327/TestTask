@@ -24,7 +24,7 @@
 </template>
 
 <script setup>
-    /* const { data: workers, error: workersError } = await useFetch(``) */
+    /* const { data: tasks, error: tasksError } = await useFetch(``) */
     const tasks = ref(
         {
     "status": "ok",
