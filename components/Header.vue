@@ -62,8 +62,8 @@
                     title: "Статусы"
                 },
                 {
-                    link: "/operations",
-                    title: "Операции"
+                    link: "/tasks",
+                    title: "Задачи"
                 }
             ]
         },
