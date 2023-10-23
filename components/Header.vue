@@ -54,15 +54,15 @@
             title: "Отчёты",
             contents: [
                 {
-                    link: "/",
+                    link: "/workers",
                     title: "Сотрудники"
                 },
                 {
-                    link: "/",
+                    link: "/statuses",
                     title: "Статусы"
                 },
                 {
-                    link: "/",
+                    link: "/operations",
                     title: "Операции"
                 }
             ]
