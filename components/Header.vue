@@ -38,7 +38,7 @@
                     </div>
                 </div>            
             </div>
-            {{ header.isMenuShow }}
+            <!-- {{ header.isMenuShow }} -->
             <button @click="isMenuShow = !isMenuShow" class="flex flex-col justify-between w-[26px] transition-[height] ease-linear duration-100 xl:hidden" :class="isMenuShow ? 'h-5' : 'h-3.5'">
                 <span :class="{'rotate-45' : isMenuShow}" class="w-full h-0.5 bg-[#1D1D1D] rounded-[1px] origin-[0] transition-transform ease-linear duration-500"></span>
                 <span :class="{'opacity-0' : isMenuShow}" class="w-full h-0.5 bg-[#1D1D1D] rounded-[1px] transition-opacity ease-linear duration-500"></span>
