@@ -12,10 +12,12 @@
 
 <script setup>
     import { vOnClickOutside } from '@vueuse/components'
+    
     const isDown = ref(false)
     function closeDropdown() {
         isDown.value = false
     }
+
     defineProps({
         title: String,
         contents: Array

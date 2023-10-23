@@ -1,5 +1,5 @@
 <template>    
-    <div class="relative overflow-x-auto shadow-[0px_0px_13px_-7px_black] rounded-xl mb-24">        
+    <div class="relative overflow-x-auto shadow-[0px_0px_13px_-7px_black] rounded-xl my-12">        
         <table class="w-full text-left rounded-xl overflow-hidden">
             <thead>
                 <tr class="uppercase text-sm text-gray-600 bg-gray-100 border-b border-[#D1CFD7]">
