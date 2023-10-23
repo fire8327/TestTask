@@ -1,5 +1,5 @@
 <template>
-    <header class="grid-container py-7 text-[#1D1D1D] relative">
+    <header class="grid-container py-7 text-[#1D1D1D] relative" ref="height">
         <div class="flex items-center gap-16 justify-between">
             <NuxtLink to="/">
                 <img src="/images/header/logo.png" alt="">
@@ -38,6 +38,7 @@
                     </div>
                 </div>            
             </div>
+            {{ header.isMenuShow }}
             <button @click="isMenuShow = !isMenuShow" class="flex flex-col justify-between w-[26px] transition-[height] ease-linear duration-100 xl:hidden" :class="isMenuShow ? 'h-5' : 'h-3.5'">
                 <span :class="{'rotate-45' : isMenuShow}" class="w-full h-0.5 bg-[#1D1D1D] rounded-[1px] origin-[0] transition-transform ease-linear duration-500"></span>
                 <span :class="{'opacity-0' : isMenuShow}" class="w-full h-0.5 bg-[#1D1D1D] rounded-[1px] transition-opacity ease-linear duration-500"></span>
@@ -48,7 +49,6 @@
 </template>
 
 <script setup>
-    const isMenuShow = ref(false)
     const dropdowns = [
         {
             title: "Отчёты",
@@ -119,4 +119,16 @@
             ]
         }
     ]
+
+    const height = ref()
+    const header = useHeader()
+    onMounted(() => {
+        header.height = height.value.clientHeight
+        window.addEventListener("resize", () => {
+            header.height = height.value.clientHeight
+        })
+    })    
+
+    const isMenuShow = ref()
+    
 </script>
