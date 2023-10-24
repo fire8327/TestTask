@@ -70,7 +70,7 @@
             title: "Операции",
             contents: [
                 {
-                    link: "/",
+                    link: "/workers",
                     title: "Сотрудники"
                 },
                 {
