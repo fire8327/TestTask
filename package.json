@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@formkit/nuxt": "^1.2.2",
     "@nuxt/devtools": "latest",
     "@nuxtjs/tailwindcss": "^6.8.0",
     "@pinia/nuxt": "^0.5.1",
@@ -19,6 +20,7 @@
     "nuxt-icon": "^0.5.0"
   },
   "dependencies": {
+    "@formkit/themes": "^1.2.2",
     "@vueuse/components": "^10.5.0"
   },
   "overrides": {
