@@ -1,23 +1,23 @@
 <template>
     <header class="grid-container py-7 text-[#1D1D1D] relative" ref="height">
-        <div class="flex items-center gap-16 justify-between">
+        <div class="flex items-center gap-12 justify-between">
             <NuxtLink to="/">
                 <img src="/images/header/logo.png" alt="">
             </NuxtLink>
             <div class="flex items-center gap-8 max-xl:flex-col bg-white max-xl:h-screen max-xl:absolute max-xl:w-full max-xl:left-0 max-xl:z-40 transition-transform duration-500" :class="isMenuShow ? 'max-xl:top-full' : 'max-xl:top-0 max-xl:-translate-y-full'"> 
                 <div class="xl:hidden w-full h-0.5 bg-[#000000]/10"></div> 
-                <div class="flex items-center gap-10 max-md:flex-col">
+                <div class="flex items-center gap-6 max-md:flex-col">
                     <HeaderDropdown v-for="dropdown in dropdowns" v-bind="dropdown"/>
                 </div>
                 <div class="xl:hidden w-full h-0.5 bg-[#000000]/10"></div> 
                 <div class="flex max-md:flex-col max-md:gap-4 xl:items-center gap-2.5 max-xl:order-first">
-                    <div class="flex items-center gap-6 py-2 px-4 rounded-lg bg-[#F6F6F6]">
-                        <p>Заработано</p>
-                        <p class="text-[#E71616]">0 руб.</p>
+                    <div class="flex items-center gap-4 py-2 px-4 rounded-lg bg-[#F6F6F6]">
+                        <p class="shrink-0">Заработано</p>
+                        <p class="shrink-0 text-[#E71616]">0 руб.</p>
                     </div>
-                    <div class="flex items-center gap-6 py-2 px-4 rounded-lg bg-[#F6F6F6]">
-                        <p>К выплате</p>
-                        <p class="text-[#34B846]">1500 руб.</p>
+                    <div class="flex items-center gap-4 py-2 px-4 rounded-lg bg-[#F6F6F6]">
+                        <p class="shrink-0">К выплате</p>
+                        <p class="shrink-0 text-[#34B846]">1500 руб.</p>
                     </div>
                 </div>
                 <div class="flex items-center gap-5">
