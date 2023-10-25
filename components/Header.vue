@@ -30,10 +30,17 @@
                     <div class="relative rounded-lg bg-[#F6F6F6] w-10 h-10 flex items-center justify-center">
                         <Icon name="material-symbols:help" class="text-2xl"/>
                     </div>
-                    <div class="relative rounded-lg bg-[#F6F6F6] w-10 h-10 flex items-center justify-center">
-                        <Icon name="material-symbols:person" class="text-2xl"/>
-                        <div class="absolute rounded-full flex items-center justify-center bg-black w-5 h-5 -top-2 -right-2">
-                            <Icon name="ph:gift" class="text-white text-sm"/>
+                    <div class="relative group">
+                        <button @click="isProfileDown = !isProfileDown" v-on-click-outside="closeProfile" class="relative rounded-lg w-10 h-10 flex items-center justify-center transition-colors duration-300" :class="isProfileDown ? 'bg-[#1F75A8]' : 'bg-[#F6F6F6]'">
+                            <Icon name="material-symbols:person" class="text-2xl transition-colors duration-300" :class="isProfileDown ? 'text-white' : 'text-[#1D1D1D]'"/>
+                            <span class="absolute rounded-full flex items-center justify-center bg-black w-5 h-5 -top-2 -right-2">
+                                <Icon name="ph:gift" class="text-white text-sm"/>
+                            </span>
+                        </button>
+                        <div class="absolute z-50 top-[calc(100%+10px)] shadow-[3px_2px_16px_0px_rgba(0,0,0,0.10)] w-fit flex flex-col rounded-lg transition-all duration-500 bg-white -translate-x-1/2 left-1/2" :class="{'hidden' : !isProfileDown}">
+                            <NuxtLink @click="closeProfile" class="transition-all duration-500 hover:bg-gray-200 px-4 py-1.5 first:rounded-t-lg last:rounded-b-lg">Профиль</NuxtLink>
+                            <NuxtLink @click="closeProfile" class="transition-all duration-500 hover:bg-gray-200 px-4 py-1.5 first:rounded-t-lg last:rounded-b-lg">Зар.плата</NuxtLink>
+                            <NuxtLink to="/login" @click="closeProfile" class="transition-all duration-500 hover:bg-gray-200 px-4 py-1.5 first:rounded-t-lg last:rounded-b-lg border-t border-[#D1CFD7] text-[#34B846]">Войти</NuxtLink>
                         </div>
                     </div>
                 </div>            
@@ -47,7 +54,9 @@
     </header>
 </template>
 
-<script setup>
+<script setup>    
+    import { vOnClickOutside } from '@vueuse/components'
+
     const dropdowns = [
         {
             title: "Отчёты",
@@ -118,6 +127,11 @@
             ]
         }
     ]
+    const isProfileDown = ref(false)
+    function closeProfile() {
+        isProfileDown.value = false
+    }
+
 
     const height = ref()
     const header = useHeader()
