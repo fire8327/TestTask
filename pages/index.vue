@@ -4,7 +4,7 @@
             <img src="/images/header/logo.png" alt="" class="w-fit">
             <div class="flex flex-col gap-6 w-full">
                 <FormKit type="text" validation="required|length:5" inner-class="w-full $remove:max-w-md" input-class="w-full rounded-lg border-[0.6px] border-[#C3C3C3] py-4 px-7" message-class="text-[#E71616]" wrapper-class="flex flex-col gap-3" label="Логин" placeholder="Введите ваш логин"/>
-                <FormKit type="text" validation="required|length:5" inner-class="w-full $remove:max-w-md" input-class="w-full rounded-lg border-[0.6px] border-[#C3C3C3] py-4 px-7" message-class="text-[#E71616]" wrapper-class="flex flex-col gap-3" label="Пароль" placeholder="Введите ваш пароль"/>
+                <FormKit type="password" validation="required|length:5" inner-class="w-full $remove:max-w-md" input-class="w-full rounded-lg border-[0.6px] border-[#C3C3C3] py-4 px-7" message-class="text-[#E71616]" wrapper-class="flex flex-col gap-3" label="Пароль" placeholder="Введите ваш пароль"/>
             </div>
             <NuxtLink to="/workers" class="w-full text-lg text-white rounded-lg bg-[#1F75A8] font-medium py-3.5 text-center">Войти</NuxtLink>
         </FormKit>   
