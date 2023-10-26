@@ -6,7 +6,7 @@
                 <FormKit v-model="user.username" type="text" validation="required|length:5" :validation-messages="{ length: 'Поле Логин должно содержать не менее 5 символов' }" inner-class="w-full" input-class="w-full rounded-lg border-[0.6px] border-[#C3C3C3] py-4 px-7" message-class="text-[#E71616]" wrapper-class="flex flex-col gap-3" label="Логин" placeholder="Введите ваш логин"/>
                 <FormKit v-model="user.password" type="password" :validation-messages="{ length: 'Поле Пароль должно содержать не менее 5 символов' }" validation="required|length:5" inner-class="w-full" input-class="w-full rounded-lg border-[0.6px] border-[#C3C3C3] py-4 px-7" message-class="text-[#E71616]" wrapper-class="flex flex-col gap-3" label="Пароль" placeholder="Введите ваш пароль"/>
             </div>
-            <FormKit type="submit" outer-class="w-full" wrapper-class="w-full" input-class="w-full text-white rounded-lg bg-[#1F75A8] font-medium py-3.5 text-center">Войти</FormKit>
+            <FormKit type="submit" outer-class="w-full" wrapper-class="w-full" input-class="w-full text-white rounded-lg bg-[#1F75A8] hover:bg-[#1F75A8]/80 transition-colors duration-500 font-medium py-3.5 text-center">Войти</FormKit>
         </FormKit>   
     </div>
 </template>
