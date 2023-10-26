@@ -40,7 +40,7 @@
                         <div class="absolute z-50 top-[calc(100%+10px)] shadow-[3px_2px_16px_0px_rgba(0,0,0,0.10)] w-fit flex flex-col rounded-lg transition-all duration-500 bg-white max-xl:left-1/2 max-xl:-translate-x-1/2 right-0" :class="{'hidden' : !isProfileDown}">
                             <NuxtLink @click="closeProfile" class="transition-all duration-500 hover:bg-gray-100 px-4 py-1.5 first:rounded-t-lg last:rounded-b-lg">Профиль</NuxtLink>
                             <NuxtLink @click="closeProfile" class="transition-all duration-500 hover:bg-gray-100 px-4 py-1.5 first:rounded-t-lg last:rounded-b-lg">Зар.плата</NuxtLink>
-                            <NuxtLink to="/" @click="closeProfile" class="transition-all duration-500 hover:bg-gray-100 px-4 py-1.5 first:rounded-t-lg last:rounded-b-lg border-t border-[#D1CFD7] text-[#E71616]">Выйти</NuxtLink>
+                            <button @click="logout" class="transition-all duration-500 hover:bg-gray-100 px-4 py-1.5 first:rounded-t-lg last:rounded-b-lg border-t border-[#D1CFD7] text-[#E71616]">Выйти</button>
                         </div>
                     </div>
                 </div>            
@@ -132,7 +132,6 @@
         isProfileDown.value = false
     }
 
-
     const height = ref()
     const header = useHeader()
     onMounted(() => {
@@ -148,4 +147,12 @@
         isMenuShow.value = false
     })
     
+    const authStore = useAuthStore()
+    const logUserOut = authStore.logUserOut
+    const router = useRouter()
+    const logout = () => {
+        logUserOut()
+        isProfileDown.value = false
+        router.push("/login")
+    }
 </script>
