@@ -8,7 +8,7 @@ export const useAuthStore  = defineStore("auth", () => {
             headers: { 'Content-Type': 'application/json' },
             body: {
                 username,
-                password,
+                password
             }
         })
         this.loading = pending
