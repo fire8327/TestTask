@@ -2,7 +2,7 @@
     <header class="grid-container py-7 text-[#1D1D1D] relative" ref="height">
         <div class="flex items-center gap-12 justify-between">
             <NuxtLink to="/">
-                <img src="/images/header/logo.png" alt="">
+                <img src="/images/header/logo.webp" alt="">
             </NuxtLink>
             <div class="flex items-center gap-8 max-xl:flex-col bg-white max-xl:h-screen max-xl:absolute max-xl:w-full max-xl:left-0 max-xl:z-40 transition-transform duration-500" :class="isMenuShow ? 'max-xl:top-full' : 'max-xl:top-0 max-xl:-translate-y-full'"> 
                 <div class="xl:hidden w-full h-0.5 bg-[#000000]/10"></div> 
